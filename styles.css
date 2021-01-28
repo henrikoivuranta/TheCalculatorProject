@@ -24,10 +24,29 @@
     display: none;
     text-decoration: none;
     font-family: Righteous;
-    font-size: 20px;
-    padding: 16px 25px;
-    letter-spacing: 4px;
 }
+
+/* Content */
+.tabcontent {
+    margin-left: 250px;
+    padding: 82px 20px;
+}
+.headers {
+    font-family: OverpassEL;
+    text-decoration: none;
+}
+
+.content-text {
+    text-decoration: none;
+    font-family: OverpassL;
+}
+
+.button{
+    font-family: OverpassL;
+    font-size: 15px;
+    padding: 5px 10px;
+}
+
 
 /* Anything related to topbar */
     .topbar{
@@ -67,15 +86,14 @@
         text-decoration: none;
         text-align: left;
         letter-spacing: 2px;
-        transition-property: letter-spacing background font-size;
-        transition-duration: .2s;
+        transition-duration: .2s;   
     }
 
     .sidebar button.active {
         background-color: #001aff;
         color: white;
-        font-size: 20px;
         letter-spacing: 4px;
+        padding: 18px 35px;
     }
 
     .sidebar button:hover:not(.active) {
@@ -86,20 +104,33 @@
     @media screen and (max-width: 700px) {
         .sidebar {
             width: 100%;
-            height: 57px;
-            position: relative;
+            transform-origin: top;
             overflow: hidden;
-            transition: height .2s;
+            transition-duration: .2s;
             box-shadow: 0 0 5px;
+            margin: 0;
         }
-        .sidebar:hover {
-            height: auto;
-        }  
+
+        .topbar {
+            position: relative;
+            text-align: center;
+            padding: 20px 0;
+        }
+
         .menubtn {
             display: block;
+            box-shadow: 0 0 2px;
+            font-size: 20px;
+            padding: 16px 25px;
+            letter-spacing: 4px;
+            cursor: pointer;
         } 
+
         .sidebar button {float: left;}
-        div.tabcontent {margin-left: 0;}
+        .tabcontent {margin-left: 0;
+            display: block;
+            padding: 20px 20px;
+        }
     }
 
     @media screen and (max-width: 400px) {
@@ -109,6 +140,7 @@
         }
         .menubtn {
             display: block;
+            text-align: center;
         }
     }
 
@@ -132,26 +164,3 @@
     ::-webkit-scrollbar-thumb:hover {
         background: #001aff;
     }
-
-/* Content */
-    .tabcontent {
-        margin-left: 250px;
-        padding: 82px 20px;
-    }
-
-    .headers {
-        font-family: OverpassEL;
-        text-decoration: none;
-    }
-
-    .content-text {
-        text-decoration: none;
-        font-family: OverpassL;
-    }
-
-    .button{
-        font-family: OverpassL;
-        font-size: 15px;
-        padding: 5px 10px;
-    }
-    

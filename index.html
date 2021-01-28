@@ -24,8 +24,8 @@
         
     </script>
 
+    <a class="menubtn" onclick="openDropdown()">Menu</a>
     <div class="sidebar">
-        <a class="menubtn">Menu</a>
         <button id="defaultOpen" class="tablinks" onclick="openPage(event, 'Main')">Main Page</button>
         <button class="tablinks" onclick="openPage(event, 'Calc 1')">Tax Calculator</button>
         <button class="tablinks" onclick="openPage(event, 'Calc 2')">Calc 2</button>
@@ -59,10 +59,12 @@
                 <label class="content-text" for="Subtract">Subtract</label>
             </form><br>
             <label class="content-text" for="amount">Value</label><br>
-            <input type="number" id="amount" style="outline: none; display: block;"><br>
+            <input type="number" id="amount" style="outline: none; display: block; border: 1px 1px 1px 1px grey;"><br>
+            <label class="content-text" for="resultBox">Result:</label>
+            <output class="content-text" for="amount" id="resultBox"></output><br><br>
             <input class="button" type="submit" onclick="calculateTAX()" value="Calculate">
-            
-        </form>
+            <a id="red-alert0" style="font-family: OverpassEL; display: none; padding: 5px 0; color: red;">Please fill in all the values before calculating!</a>
+        </form>       
     </div>
     
     <div id="Calc 2" class="tabcontent" style="display: none;">
