@@ -1,0 +1,157 @@
+/* Removing the unwanted margin from the edges. */
+* {
+    margin: 0;
+}
+
+/* Font declaration */
+
+@font-face{
+    font-family: Righteous;
+    src: url("fonts/Righteous-Regular.ttf");
+}
+
+@font-face{
+    font-family: OverpassL;
+    src: url("fonts/Overpass-Light.ttf");
+}
+
+@font-face{
+    font-family: OverpassEL;
+    src: url("fonts/Overpass-ExtraLight.ttf");
+}
+
+.menubtn {
+    display: none;
+    text-decoration: none;
+    font-family: Righteous;
+    font-size: 20px;
+    padding: 16px 25px;
+    letter-spacing: 4px;
+}
+
+/* Anything related to topbar */
+    .topbar{
+        background-color: #fff;
+        font-family: Righteous;
+        text-align: left;
+        text-decoration: none;
+        cursor: default;
+        letter-spacing: 5px;
+        padding: 20px 25px;
+        box-shadow: 0 0 5px black;
+        position: fixed;
+        width: 100%;
+    }
+
+/* Anything related to sidebar */
+    .sidebar {
+        width: 250px;
+        background-color: #ffffff;
+        position: fixed;
+        height: 100%;
+        overflow: auto;
+        box-shadow: 0 4px 5px black;
+        margin: 70px 0;
+    }
+
+    .sidebar button {
+        display: block;
+        color: black;
+        padding: 16px 25px;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        width: 100%;
+        font-family: Righteous;
+        font-size: 15px;
+        text-decoration: none;
+        text-align: left;
+        letter-spacing: 2px;
+        transition-property: letter-spacing background font-size;
+        transition-duration: .2s;
+    }
+
+    .sidebar button.active {
+        background-color: #001aff;
+        color: white;
+        font-size: 20px;
+        letter-spacing: 4px;
+    }
+
+    .sidebar button:hover:not(.active) {
+        background-color: #ddd;
+        letter-spacing: 4px;
+    }   
+
+    @media screen and (max-width: 700px) {
+        .sidebar {
+            width: 100%;
+            height: 57px;
+            position: relative;
+            overflow: hidden;
+            transition: height .2s;
+            box-shadow: 0 0 5px;
+        }
+        .sidebar:hover {
+            height: auto;
+        }  
+        .menubtn {
+            display: block;
+        } 
+        .sidebar button {float: left;}
+        div.tabcontent {margin-left: 0;}
+    }
+
+    @media screen and (max-width: 400px) {
+        .sidebar button {
+            text-align: center;
+            float: none;
+        }
+        .menubtn {
+            display: block;
+        }
+    }
+
+/* Custom scrollbar */
+    ::-webkit-scrollbar
+    {
+        width: 10px;
+    }
+
+    ::-webkit-scrollbar-track
+    {
+        background: white;
+        box-shadow: inset 0 0 5px grey;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background: #888;
+        box-shadow: 0 0 2px #000000;
+    }
+    
+    ::-webkit-scrollbar-thumb:hover {
+        background: #001aff;
+    }
+
+/* Content */
+    .tabcontent {
+        margin-left: 250px;
+        padding: 82px 20px;
+    }
+
+    .headers {
+        font-family: OverpassEL;
+        text-decoration: none;
+    }
+
+    .content-text {
+        text-decoration: none;
+        font-family: OverpassL;
+    }
+
+    .button{
+        font-family: OverpassL;
+        font-size: 15px;
+        padding: 5px 10px;
+    }
+    

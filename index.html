@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="stylesheet" href="styles.css">
+<script src="js.js"></script>
+
+<header>
+    <title>The Calculator Project</title>
+</header>
+
+<body>
+    <!--Topbar-->
+    <div class="topbar">
+        <h2>The Calculator Project</h2>
+    </div>
+
+    <!--Sidebar-->
+    <script>
+        window.onload = function()
+        {
+            document.getElementById("defaultOpen").click(0);
+        }
+        
+    </script>
+
+    <div class="sidebar">
+        <a class="menubtn">Menu</a>
+        <button id="defaultOpen" class="tablinks" onclick="openPage(event, 'Main')">Main Page</button>
+        <button class="tablinks" onclick="openPage(event, 'Calc 1')">Tax Calculator</button>
+        <button class="tablinks" onclick="openPage(event, 'Calc 2')">Calc 2</button>
+        <button class="tablinks" onclick="openPage(event, 'Calc 3')">Calc 3</button>
+        <button class="tablinks" onclick="openPage(event, 'Calc 4')">Calc 4</button>
+        <button class="tablinks" onclick="openPage(event, 'Calc 5')">Calc 5</button>
+        <button class="tablinks" onclick="openPage(event, 'Calc 6')">Calc 6</button>
+    </div>
+
+    <!--Content-->
+    <div id="Main" class="tabcontent" style="display: none;">
+        <h3 class="headers">About this website!</h3>
+        <p class="content-text">This website was created and maintained by a young student from Finland. Goal of this project is to have as many different calculators as possible in a single place. This project is a part of my personal learning in coding and web design.</p><br>
+        <p class="content-text">If you have any suggestions or questions, please send me an email to this address <a href="mailto:thecalculatorproject@gmail.com">thecalculatorproject@gmail.com</a>. I'm working on adding a contact form system to this website to make contacting easier.</p><br>
+        <p class="content-text">Donations are also appreciated via <a href="https://paypal.me/moneypocketofDFN/">PayPal</a>.</p>
+    </div>
+    
+    <div id="Calc 1" class="tabcontent" style="display: none;"> 
+        <script src="calculators/TAX.js"></script>
+        <h3 class="headers">Tax Calculator</h3>
+        <p class="content-text">This calculator helps you e.g. determine the price of a product with TAX excluded or TAX included.</p><br><br>
+        <form>
+            <label class="content-text" for="tax">Tax%</label><br>
+            <input type="range" min="1" max="50" value="1" id="tax" oninput="this.nextElementSibling.value = this.value">
+            <output class="content-text">1</output><a class="content-text">%</a><br><br>
+            <form name="equationType">
+                <input type="radio" id="Add" name="equationType">
+                <label class="content-text" for="Add">Add</label>
+                <br>
+                <input type="radio" id="Subtract" name="equationType">
+                <label class="content-text" for="Subtract">Subtract</label>
+            </form><br>
+            <label class="content-text" for="amount">Value</label><br>
+            <input type="number" id="amount" style="outline: none; display: block;"><br>
+            <input class="button" type="submit" onclick="calculateTAX()" value="Calculate">
+            
+        </form>
+    </div>
+    
+    <div id="Calc 2" class="tabcontent" style="display: none;">
+        <h3 class="headers">Tokyo</h3>
+        <p class="content-text">Tokyo is the capital of Japan.</p>
+    </div>
+
+    <div id="Calc 3" class="tabcontent" style="display: none;"> 
+        <h3 class="headers">Lorem</h3>
+        <p class="content-text">Paris is the capital of France.</p>
+    </div>
+    
+    <div id="Calc 4" class="tabcontent" style="display: none;">
+        <h3 class="headers">Ipsum</h3>
+        <p class="content-text">Tokyo is the capital of Japan.</p>
+    </div>
+
+    <div id="Calc 5" class="tabcontent" style="display: none;"> 
+        <h3 class="headers">Fuck</h3>
+        <p class="content-text">Paris is the capital of France.</p>
+    </div>
+    
+    <div id="Calc 6" class="tabcontent" style="display: none;">
+        <h3 class="headers">This</h3>
+        <p class="content-text">Tokyo is the capital of Japan.</p>
+    </div>
+</body>
