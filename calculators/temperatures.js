@@ -30,7 +30,7 @@ function calculateTemps()
     if (cKelvin.checked)
     {
         kelvin = input;
-        celsius = kelvin + 273.15;
+        celsius = kelvin - 273.15;
         fahrenheit = (kelvin - 273.15) * 1.8 + 32;
     }
 

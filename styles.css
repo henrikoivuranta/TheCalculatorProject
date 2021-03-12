@@ -99,7 +99,12 @@
     .sidebar button:hover:not(.active) {
         background-color: #ddd;
         letter-spacing: 4px;
-    }   
+    }
+
+    #mobileVerAlert {
+        display: none;
+        color: red;
+    }
 
     @media screen and (max-width: 700px) {
         .sidebar {
@@ -131,6 +136,10 @@
             display: block;
             padding: 20px 20px;
         }
+        #mobileVerAlert{
+            display: block;
+            color: red;
+        }
     }
 
     @media screen and (max-width: 400px) {
@@ -142,8 +151,8 @@
             display: block;
             text-align: center;
         }
+        
     }
-
 /* Custom scrollbar */
     ::-webkit-scrollbar
     {
